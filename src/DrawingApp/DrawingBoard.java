@@ -43,7 +43,7 @@ public class DrawingBoard extends JPanel implements MouseListener, MouseMotionLi
         frame.setLayout(new BorderLayout());
         frame.add(this, BorderLayout.CENTER);
 
-        ImageIcon icon = new ImageIcon("data/logo.png");
+        ImageIcon icon = new ImageIcon("icone/logo.png");
         frame.setIconImage(icon.getImage());
 
         clearButton = new JButton("Clear");
