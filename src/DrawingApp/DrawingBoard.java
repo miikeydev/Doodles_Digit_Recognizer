@@ -49,7 +49,7 @@ public class DrawingBoard extends JPanel implements MouseListener, MouseMotionLi
         clearButton = new JButton("Clear");
         clearButton.addActionListener(e -> clear());
 
-        clearButton.setFont(new Font("Arial", Font.PLAIN, 20));
+        clearButton.setFont(new Font("Arial", Font.PLAIN, 16));
         clearButton.setBackground(new Color(0x3F3C3C));
         clearButton.setForeground(Color.WHITE);
         clearButton.setOpaque(true);
@@ -61,15 +61,12 @@ public class DrawingBoard extends JPanel implements MouseListener, MouseMotionLi
         eraserLabel.setOpaque(true);
         eraserLabel.setBorder(BorderFactory.createEmptyBorder(5, 10, 5, 10));
 
-        //ImageIcon eraserIcon = new ImageIcon("gomme3.png");
-        //eraserLabel.setIcon(eraserIcon);
-
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(clearButton);
         buttonPanel.add(eraserLabel);
 
-        buttonPanel.add(Box.createHorizontalStrut(-150)); // Ajoute un espace de 20 pixels avant le bouton
+        buttonPanel.add(Box.createHorizontalStrut(-150));
         frame.add(buttonPanel, BorderLayout.SOUTH);
 
         frame.add(predictionPanel, BorderLayout.EAST);
@@ -78,6 +75,7 @@ public class DrawingBoard extends JPanel implements MouseListener, MouseMotionLi
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1250, 670);
         frame.setVisible(true);
+        frame.setResizable(false);
     }
 
 
